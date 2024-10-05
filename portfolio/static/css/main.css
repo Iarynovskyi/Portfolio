@@ -28,8 +28,11 @@ header{
 }
 .main{
     margin: 0 auto;
+    justify-content: center;
+    display: flex;
 }
 .main-about{
+    flex-direction: column;
     max-width: 550px;
     padding: 0 1rem;
     line-height: 170%;
@@ -113,4 +116,51 @@ header{
 .categories-tag:not(:last-of-type)::after{
     content: "|";
     margin: 0 0.25rem;
+}
+.project-card-img{
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.project{
+    max-width: 50rem;
+    flex-direction: column;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+}
+.project-content{
+    margin-bottom: 1rem;
+    line-height: 150%;
+}
+@media (min-width: 48.75rem) {
+    .project{
+        flex-direction: row;
+        padding: 0;
+    };
+    .project-content{
+        flex: 7;
+        margin-right: 3rem;
+        padding: 0;
+    }
+}
+.project-heading{
+    margin: 0;
+    font-size: 2rem;
+    line-height: 150%;
+}
+.project-heading-meta{
+    font-size: inherit;
+    margin-bottom: 1rem;
+}
+.project-meta-grop{
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+.technology-list{
+    text-decoration: none;
+    margin: 0;
+    padding-left: 0.75rem;
+    line-height: 1.75rem;
+}
+.technology-list-item:before{
+    content: "";
 }

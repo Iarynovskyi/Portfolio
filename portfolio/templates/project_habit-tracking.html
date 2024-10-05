@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
 
-</body>
-</html>
+    <main class="main main-project">
+        <div>
+        <img class="project-card-img" src="{{ url_for('static', filename=project['img']) }}"
+             alt="{{ project['name'] }} hero img">
+            <article class="project">
+                <article class="project-content">
+                    <h2 class="project-heading">{{ project['name'] }}</h2>
+                    <h2>Процес створення:</h2>
+                    <p>Цей додаток був створений з метою допомогти користувачам відстежувати свої звички.
+                        Я використав Flask як веб-фреймворк для розробки сервера, а також бібліотеку для роботи з базами даних.
+                        Додаток має простий та зрозумілий інтерфейс,
+                        що дозволяє користувачам легко додавати та переглядати свої звички.</p>
+                </article>
+                <section>
+                    <article class="project-meta-grop">
+                        <h3 class="project-heading project-heading-meta"> Technologies used:</h3>
+                        <ul class="technology-list">
+                            <li class="technology-list-item">HTML / CSS</li>
+                            <li class="technology-list-item">PYTHON</li>
+                            <li class="technology-list-item">RENDER</li>
+                        </ul>
+                    </article>
+                </section>
+            </article>
+        </div>
+    </main>
+
+{% endblock %}
